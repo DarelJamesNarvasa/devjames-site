@@ -1,30 +1,24 @@
-#home {
-    position: relative;
-    overflow: hidden;
-    z-index: 1;
-  }
+.skill-icon:hover {
+  transform: scale(1.2);
+  transition: transform 0.3s ease-in-out;
+}
 
-  #home::before {
-    content: '';
-    position: absolute;
-    top: 0; left: 0;
-    width: 200%;
-    height: 100%;
-    background: linear-gradient(120deg, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0.7) 50%, rgba(255,255,255,0.4) 100%);
-    animation: moveBackground 10s linear infinite;
-    z-index: 0;
-  }
+.skills-scroll-wrapper {
+  overflow: hidden;
+  position: relative;
+}
 
-  @keyframes moveBackground {
-    0% {
-      transform: translateX(-50%);
-    }
-    100% {
-      transform: translateX(0%);
-    }
-  }
+.skills-scroll {
+  display: flex;
+  animation: scroll-left 25s linear infinite;
+  width: max-content;
+}
 
-  #home .container {
-    position: relative;
-    z-index: 2;
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
   }
+  100% {
+    transform: translateX(-50%);
+  }
+}
