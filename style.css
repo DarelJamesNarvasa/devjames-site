@@ -22,3 +22,10 @@
     transform: translateX(-50%);
   }
 }
+
+.explore-btn {
+  transition: transform 0.2s;
+}
+.explore-btn:hover {
+  transform: scale(1.08);
+}
